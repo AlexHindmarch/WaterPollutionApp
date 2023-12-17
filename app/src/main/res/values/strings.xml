@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">WaterPollutionApp</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="spinner_prompt">Report an incident</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+
+    <string-array name="incident_items">
+        <item>Oil spill</item>
+        <item>Non urgent rubbish removal</item>
+        <item>Loose riverbank</item>
+    </string-array>
+</resources>

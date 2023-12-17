@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.waterpollutionapp">
+    <!-- Location services access -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- INTERNET permission for internet access -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WaterPollutionApp"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".CurrentReports"
+            android:exported="false" />
+        <!-- MainActivity (Entry Point) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- SignUpActivity -->
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" /> <!-- LoginActivity -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" /> <!-- MapsActivity -->
+        <activity
+            android:name=".MapsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_maps" /> <!-- HomeActivity -->
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true" /> <!-- ReportIncidentActivity -->
+        <activity
+            android:name=".ReportIncidentActivity"
+            android:label="ReportIncidentActivity" /> <!-- CompletedReportActivity -->
+        <activity
+            android:name=".CompletedReportActivity"
+            android:label="CompletedReportActivity" /> <!-- Define your other activities here -->
+        <!-- Google Maps API Key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_GOOGLE_MAPS_API_KEY" />
+    </application>
+
+</manifest>
